@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiến Lên - Ghi điểm</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<div id="setup">
+  <h1>🃏 TIẾN LÊN</h1>
+  <p>Ghi điểm nhanh - Offline</p>
+
+  <input id="name0" placeholder="Người chơi 1">
+  <input id="name1" placeholder="Người chơi 2">
+  <input id="name2" placeholder="Người chơi 3">
+  <input id="name3" placeholder="Người chơi 4">
+
+  <input id="target" type="number" placeholder="Điểm để thắng (vd: 100)">
+  <button onclick="startGame()">▶️ Bắt đầu</button>
+</div>
+
+<div id="game" class="hidden">
+  <div class="top-bar">
+    <span id="timer">⏱ 00:00</span>
+    <button onclick="newRound()">➕ Ván mới</button>
+  </div>
+
+  <div id="tableWrap"></div>
+
+  <div id="desk" class="hidden">
+    <h3>Chọn thứ tự Nhất → Nhì → Ba</h3>
+    <div class="desk">
+      <div class="seat s0" onclick="pick(0)"></div>
+      <div class="seat s1" onclick="pick(1)"></div>
+      <div class="seat s2" onclick="pick(2)"></div>
+      <div class="seat s3" onclick="pick(3)"></div>
+    </div>
+  </div>
+
+  <footer>Author: <b>N Anh Cư</b></footer>
+</div>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>
